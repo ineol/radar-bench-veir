@@ -3,9 +3,6 @@ set -euxo pipefail
 
 BENCH="scripts/bench"
 
-# Prepare build
-lake exe cache get
-
 # Run build
 LAKE_OVERRIDE_LEAN=true LEAN=$(realpath "$BENCH/build/fake-root/bin/lean") \
   "$BENCH/measure.py" -t build \

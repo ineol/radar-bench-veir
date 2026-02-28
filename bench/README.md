@@ -1,8 +1,7 @@
-# Cslib benchmark suite
+# VeIR benchmark suite
 
-This directory contains the cslib benchmark suite.
-It is built around [radar](github.com/leanprover/radar)
-and benchmark results can be viewed on the [Lean FRO radar instance](https://radar.lean-lang.org/repos/cslib).
+This directory contains the VeIR benchmark suite.
+It is built around [radar](github.com/leanprover/radar).
 
 To execute the entire suite, call the `run` script in this directory.
 To execute an individual benchmark, call the `run` script in the benchmark's directory.
@@ -16,7 +15,7 @@ in text editors that rely on the file ending.
 
 ### The `build` benchmark
 
-This benchmark executes a complete build of cslib and collects global and per-module metrics.
+This benchmark executes a complete build of VeIR and collects global and per-module metrics.
 
 The following metrics are collected by a wrapper around the entire build process:
 
