@@ -15,7 +15,7 @@ if [ -d "scripts/bench" ]; then
   mv measurements.jsonl "$OUT"
 else
   echo Bringing my own copy of the bench suite
-  cp -r "$BENCH/bench" scripts/bench
-  scripts/bench/run
+  cp -r "$BENCH/bench" bench
+  bench/run
   mv radar.jsonl "$OUT"
 fi
