@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-BENCH="scripts/bench"
+BENCH="bench"
 
 echo "Running benchmark: build"
 "$BENCH/build/run"
