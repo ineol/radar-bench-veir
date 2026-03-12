@@ -7,7 +7,7 @@ BENCH="bench"
 LAKE_OVERRIDE_LEAN=true LEAN=$(realpath "$BENCH/build/fake-root/bin/lean") \
   "$BENCH/measure.py" -t build \
   -m instructions -m maxrss -m task-clock -m wall-clock -- \
-  lakeprof record lake build --no-cache
+  lakeprof record lake build Veir --no-cache
 
 # Analyze lakeprof data
 lakeprof report -pj | jq -r '"radar::measurement=\({metric: "build/lakeprof/longest build path//wall-clock", value: .[-1][2], unit: "s"})"'
