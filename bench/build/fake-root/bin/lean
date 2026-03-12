@@ -9,7 +9,7 @@ from pathlib import Path
 
 NAME = "build"
 REPO = Path()
-BENCH = REPO / "scripts" / "bench"
+BENCH = REPO / "bench"
 OUT = REPO / "radar.jsonl"
 
 
