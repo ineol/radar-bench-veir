@@ -40,13 +40,6 @@ def get_module(setup: Path) -> str:
     with open(setup) as f:
         return json.load(f)["name"]
 
-
-def count_lines(module: str, path: Path) -> None:
-    with open(path) as f:
-        lines = sum(1 for _ in f)
-    save_result(f"{NAME}/module/{module}//lines", lines)
-
-
 def run_lean(module: str) -> None:
     stderr = run_stderr(
         f"{BENCH}/measure.py",
@@ -87,7 +80,6 @@ def main() -> None:
     setup: Path = args.setup
 
     module = get_module(setup)
-    count_lines(module, lean)
     run_lean(module)
 
 
